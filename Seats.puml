@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/class-diagram
+class seats{
++ int rows;
++ int columns;
+- final CONST TOTALSEATS = 15;
+
++int calculateRemainingSeats(g)
+}
+
+@enduml
