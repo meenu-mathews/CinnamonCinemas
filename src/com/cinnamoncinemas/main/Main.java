@@ -1,12 +1,17 @@
 package com.cinnamoncinemas.main;
 
-import java.util.Scanner;
+
+import com.cinnamoncinemas.test.SeatsTest;
+
+import static org.testng.AssertJUnit.assertTrue;
+
 public class Main {
 
     public static void main(String[] args){
-        Scanner scannerObj = new Scanner(System.in);
-        System.out.println("Enter number of seats (between 3 & 5)");
-        int numberOfSeats = scannerObj.nextInt();
+
+        SeatsTest seatsTestObj = new SeatsTest();
+
+        assertTrue(seatsTestObj.checkIfUserInputIsValid());
     }
 }
 
