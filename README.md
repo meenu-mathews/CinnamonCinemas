@@ -1,5 +1,5 @@
 # CinnamonCinemas
-This program is aiming to book seats at a cinema with 15 seats.
+This program aims to book seats at a cinema with 15 seats.
 
 No of rows = 3
 
