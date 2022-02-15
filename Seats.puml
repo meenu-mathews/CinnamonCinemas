@@ -5,7 +5,7 @@ class seats{
 + int columns;
 - final CONST TOTALSEATS = 15;
 
-+int calculateRemainingSeats(g)
++int calculateRemainingSeats()
 }
 
 @enduml

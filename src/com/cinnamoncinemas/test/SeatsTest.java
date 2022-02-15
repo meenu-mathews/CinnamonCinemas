@@ -4,35 +4,26 @@ import com.cinnamoncinemas.main.SeatArray;
 
 import java.util.Scanner;
 public class SeatsTest {
-    private final int rows = 3;
-    private final int columns = 5;
-    private final int TOTALSEATS = rows*columns;
-    boolean[][] seatArray = new boolean[rows][columns];
     int numberOfSeats;
 
-    public int getNumberOfSeats(){
-
-        return TOTALSEATS-numberOfSeats;
-    }
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
+    SeatArray seatArray = new SeatArray();
+    public int getNumberOfSeats() {
+        return numberOfSeats;
     }
 
-    public void allocateSeats(){
-        while(getNumberOfSeats()!=0)
-            for(int i=0;i<rows;i++){
-                for(int j=0;j<columns;j++){
-                    seatArray[i][j] = false;
-                }
-            }
+    public int getRemainingNumberOfSeats(){
+
+        int TOTALSEATS = seatArray.rows * seatArray.columns;
+        return TOTALSEATS -numberOfSeats;
     }
+
     public boolean checkIfUserInputIsValid() {
         Scanner in = new Scanner(System.in);
         do {
             System.out.print("Enter number of seats (between 1 & 3): ");
         } while( !isValid(numberOfSeats = in.nextInt()) );
-        allocateSeats();
-        System.out.println("Only "+getNumberOfSeats()+" empty seats remaining");
+        seatArray.allocateSeats();
+        System.out.println("Only "+getRemainingNumberOfSeats()+" empty seats remaining");
         return true;
     }
 
