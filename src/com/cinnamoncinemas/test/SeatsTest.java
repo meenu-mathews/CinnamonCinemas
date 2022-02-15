@@ -5,7 +5,7 @@ import com.cinnamoncinemas.main.SeatArray;
 import java.util.Scanner;
 public class SeatsTest {
     int seatsRemaining;
-    int numberOfSeats;
+
 
     SeatArray seatArray = new SeatArray();
     public boolean checkIfUserInputIsValid() {
@@ -13,7 +13,8 @@ public class SeatsTest {
         do {
             System.out.print("Enter number of seats (between 1 & 3): ");
         } while( !isValid(numberOfSeats = in.nextInt()) );
-        System.out.println(seatArray.getNumberOfSeats(numberOfSeats)+" seats left");
+        seatArray.allocateSeats();
+        System.out.println("Only "+seatArray.getNumberOfSeats(numberOfSeats)+" empty seats remaining");
         return true;
     }
 
