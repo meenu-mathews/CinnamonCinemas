@@ -1,8 +1,6 @@
 package com.cinnamoncinemas.main;
 import com.cinnamoncinemas.test.SeatsTest;
 import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 /*
 Pseudo Code
